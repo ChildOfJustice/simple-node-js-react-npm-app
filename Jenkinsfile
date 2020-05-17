@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                sh 'npm i --loglevel silent'
                 sh 'npm cache clean --force'
                 sh 'npm install --save core-js@^3'
                 sh 'npm update [-g] [chokidar]'
