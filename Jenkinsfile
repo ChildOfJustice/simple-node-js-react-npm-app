@@ -10,7 +10,6 @@ pipeline {
     }
     stages {
         stage('Build') {
-            stage('Build') { 
             steps {
                 sh 'npm i --loglevel silent'
                 sh 'npm cache clean --force'
@@ -21,7 +20,6 @@ pipeline {
                 
                 sh 'npm install'
             }
-        }
         }
         stage('Test') {
             steps {
