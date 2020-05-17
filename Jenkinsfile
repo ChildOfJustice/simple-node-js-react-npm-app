@@ -11,9 +11,11 @@ pipeline {
                 sh 'npm cache clean --force'
                 sh 'npm install --save core-js@^3'
                 sh 'npm update [-g] [chokidar]'
+                sh 'npm install gulp-sass --save-dev'
+                sh 'npm install node-sass@latest'
+                
                 sh 'npm install --no-optional' 
-                try{require('./postinstall')}catch(e){}
-                echo e
+                
             }
         }
     }
