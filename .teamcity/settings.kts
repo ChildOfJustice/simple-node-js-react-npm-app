@@ -45,6 +45,7 @@ project {
             param("aws.credentials.type", "aws.access.keys")
             param("aws.region.name", "eu-central-1")
             param("storage.s3.upload.presignedUrl.enabled", "true")
+            param("sardor.test", "MYMESSAGEISHERE")
         }
         feature {
             id = "PROJECT_EXT_4"
@@ -72,6 +73,7 @@ object Build : BuildType({
             """.trimIndent()
             dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
             dockerImage = "node:latest"
+
         }
     }
 
