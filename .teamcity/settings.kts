@@ -30,6 +30,23 @@ version = "2021.1"
 project {
 
     buildType(Build)
+
+    features {
+        feature {
+            id = "PROJECT_EXT_3"
+            type = "storage_settings"
+            param("aws.service.endpoint", "")
+            param("aws.use.default.credential.provider.chain", "true")
+            param("aws.external.id", "TeamCity-server-e2eaa432-cef0-4452-b802-63484a537a43")
+            param("aws.environment", "")
+            param("storage.name", "TEST")
+            param("storage.s3.bucket.name", "sardor-test-code")
+            param("storage.type", "S3_storage")
+            param("aws.credentials.type", "aws.access.keys")
+            param("aws.region.name", "eu-central-1")
+            param("storage.s3.upload.presignedUrl.enabled", "true")
+        }
+    }
 }
 
 object Build : BuildType({
