@@ -46,6 +46,11 @@ project {
             param("aws.region.name", "eu-central-1")
             param("storage.s3.upload.presignedUrl.enabled", "true")
         }
+        feature {
+            id = "PROJECT_EXT_4"
+            type = "active_storage"
+            param("active.storage.feature.id", "PROJECT_EXT_3")
+        }
     }
 }
 
